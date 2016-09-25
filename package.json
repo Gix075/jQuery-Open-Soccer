@@ -1,0 +1,63 @@
+{
+  "name": "g-open-soccer",
+  "version": "1.0.0",
+  "versionStatus": "beta",    
+  "description": "Sportsopendata.net API interface jQuery plugin",
+  "keywords": [
+    "jquery-plugin",
+    "jquery",
+    "soccer",
+    "football",
+    "standings",
+    "charts",
+    "stats",
+    "soccer standings",
+    "soccer stats",
+    "soccer charts",
+    "football standings",
+    "football stats",
+    "football charts",
+    "plugins"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gix075/gOpenSoccer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gix075/gOpenSoccer/issues"
+  },
+  "author": "Gix075 <gildo.giuliani@gmail.com> (https://github.com/Gix075)",
+  "homepage": "https://github.com/Gix075/gOpenSoccer",
+  "contributors": [
+    "Gix075 <gildo.giuliani@gmail.com> (https://github.com/Gix075)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">=1.5.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs": "^2.7.0",
+    "grunt-karma": "^0.12.0",
+    "jscs": "^2.10.1",
+    "karma": "^0.13.21",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-qunit": "^0.1.5",
+    "phantomjs": "^1.9.18",
+    "qunitjs": "^1.19.0"
+  },
+  "scripts": {
+    "jscs": "jscs src",
+    "test": "npm run jscs && grunt travis --verbose"
+  },
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  }
+}

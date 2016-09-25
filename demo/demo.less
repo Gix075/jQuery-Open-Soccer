@@ -1,0 +1,62 @@
+@font-1: "Roboto",sans-serif;
+@font-2: "Roboto Slab",sans-serif;
+@color-1: #ff8c00;
+@color-1-hover: #fc9b24;
+
+html,
+body {
+    font-family: @font-1;
+    overflow-x: hidden;
+}
+
+a {
+    color: @color-1;
+    &:hover {
+        color: @color-1-hover;
+    }
+}
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.btn-primary {
+    background: @color-1;
+}
+
+.container {
+    overflow-x: hidden;
+}
+
+.table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: @font-2;
+}
+
+.site-header {
+    color: darkorange;
+    padding: 40px 0;
+    .site-title {
+        font-weight: 700;
+        font-size: 5vw;
+        text-transform: uppercase;
+        small {
+            display: block;
+            font-size: 25%;
+        }
+    }
+}
+
+.site-overview {
+    margin: 40px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+

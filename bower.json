@@ -1,0 +1,25 @@
+{
+  "name": "g-open-soccer",
+  "license": "MIT",
+  "authors": [
+    "Gix075 <gildo.giuliani@gmail.com> (https://github.com/Gix075)"
+  ],
+  "description": "Sportsopendata.net API interface jQuery plugin.",
+  "homepage": "https://github.com/Gix075/gOpenSoccer",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "boilerplate",
+    "jquery-plugin",
+    "jquery-boilerplate"
+  ],
+  "main": "src/jquery.gopensoccer.standings.js",
+  "dependencies": {
+    "jquery": "1"
+  },
+  "ignore": [
+    "npm-debug.log",
+    "bower_components",
+    "node_modules"
+  ]
+}
