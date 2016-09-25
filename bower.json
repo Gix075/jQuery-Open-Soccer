@@ -15,7 +15,8 @@
   ],
   "main": "src/jquery.gopensoccer.standings.js",
   "dependencies": {
-    "jquery": "1"
+    "jquery": "1",
+    "chart.js": "^2.3.0"
   },
   "ignore": [
     "npm-debug.log",

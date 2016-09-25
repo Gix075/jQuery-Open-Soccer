@@ -23,6 +23,15 @@ a:hover {
 .container {
   overflow-x: hidden;
 }
+.btn-primary {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #fc9b24;
+}
 .table-wrapper {
   width: 100%;
   max-width: 100%;
