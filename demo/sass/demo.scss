@@ -1,18 +1,18 @@
-@font-1: "Roboto",sans-serif;
-@font-2: "Roboto Slab",sans-serif;
-@color-1: #ff8c00;
-@color-1-hover: #fc9b24;
+$font-1: "Roboto",sans-serif;
+$font-2: "Roboto Slab",sans-serif;
+$color-1: #ff8c00;
+$color-1-hover: #fc9b24;
 
 html,
 body {
-    font-family: @font-1;
+    font-family: $font-1;
     overflow-x: hidden;
 }
 
 a {
-    color: @color-1;
+    color: $color-1;
     &:hover {
-        color: @color-1-hover;
+        color: $color-1-hover;
     }
 }
 .nav-list > .active > a,
@@ -23,7 +23,7 @@ a {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .btn-primary {
-    background: @color-1;
+    background: $color-1;
 }
 
 .container {
@@ -36,7 +36,7 @@ a {
             box-shadow: none;
     &:hover,
     &:focus {
-        background: @color-1-hover;
+        background: $color-1-hover;
     }
 }
 
@@ -47,7 +47,7 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: @font-2;
+    font-family: $font-2;
 }
 
 .site-header {
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
     padding: 40px 0;
     .site-title {
         font-weight: 700;
-        font-size: 5vw;
+        font-size: 4vw;
         text-transform: uppercase;
         small {
             display: block;

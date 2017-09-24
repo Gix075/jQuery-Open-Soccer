@@ -23,55 +23,63 @@ module.exports = function( grunt ) {
 				banner: "<%= meta.banner %>"
 			},
 			dist: {
-				src: [ "src/jquery.gopensoccer.standings.js" ],
-				dest: "dist/jquery.gopensoccer.standings.js"
-			}
-		},
-
-		// Lint definitions
-		jshint: {
-			files: [ "src/jquery.gopensoccer.standings.js", "test/**/*" ],
-			options: {
-				jshintrc: ".jshintrc"
-			}
-		},
-
-		jscs: {
-			src: "src/**/*.js",
-			options: {
-				config: ".jscsrc"
+				src: [ "src/jquery.opensoccer.standings.js","src/jquery.opensoccer.stats.js" ],
+				dest: "dist/jquery.opensoccer.js"
 			}
 		},
 
 		// Minify definitions
 		uglify: {
 			dist: {
-				src: [ "dist/jquery.gopensoccer.standings.js" ],
-				dest: "dist/jquery.gopensoccer.standings.min.js"
+				src: [ "dist/jquery.opensoccer.js" ],
+				dest: "dist/jquery.opensoccer.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
 			}
 		},
+        
+        sass: { // Task
+            dev: { // Target
+                options: { // Target options
+                    style: 'expanded'
+                },
+                files: { // Dictionary of files
+                    'demo/css/jQueryOpenSoccer.css': 'src/sass/jQueryOpenSoccer.scss', // 'destination': 'source'
+                    'demo/css/demo.css': 'demo/sass/demo.scss' // 'destination': 'source'
+                }
+            },
+            dist: { // Target
+                options: { // Target options
+                    style: 'expanded'
+                },
+                files: { // Dictionary of files
+                    'dist/css/jQueryOpenSoccer.css': 'src/sass/jQueryOpenSoccer.scss'
+                }
+            },
+            dist_compressed: { // Target
+                options: { // Target options
+                    style: 'compressed'
+                },
+                files: { // Dictionary of files
+                    'dist/css/jQueryOpenSoccer.min.css': 'src/sass/jQueryOpenSoccer.scss'
+                }
+            }
+        },
 
-
-		// watch for changes to source
-		// Better than calling grunt a million times
-		// (call 'grunt watch')
 		watch: {
-			files: [ "src/*", "test/**/*" ],
+			files: [ "src/sass/**/*","demo/sass/**/*"],
 			tasks: [ "default" ]
 		}
 
 	} );
 
 	grunt.loadNpmTasks( "grunt-contrib-concat" );
-	grunt.loadNpmTasks( "grunt-contrib-jshint" );
-	grunt.loadNpmTasks( "grunt-jscs" );
 	grunt.loadNpmTasks( "grunt-contrib-uglify" );
 	grunt.loadNpmTasks( "grunt-contrib-watch" );
+    grunt.loadNpmTasks( "grunt-contrib-sass" );
 
-	grunt.registerTask( "lint", [ "jshint", "jscs" ] );
-	grunt.registerTask( "build", [ "concat", "uglify" ] );
-	grunt.registerTask( "default", [ "jshint", "build" ] );
+	grunt.registerTask( "default", [ "sass:dev" ] );
+    grunt.registerTask( "dev", [ "sass:dev","watch" ] );
+    grunt.registerTask( "dist", [ "concat", "uglify", "sass:dist", "sass:dist_compressed" ] );
 };

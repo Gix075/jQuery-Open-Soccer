@@ -3,7 +3,7 @@
 
 	"use strict";
 
-		var pluginName = "gOpenSoccer_getStandings",
+		var pluginName = "JOS_getStandings",
 			defaults = {
                 apiBaseURL: "http://soccer.sportsopendata.net/v1/leagues/",
 				season: "15-16",
@@ -27,18 +27,10 @@
 			init: function() {
                 
                 var plugin = this;
-                switch(this.settings.get) {
-                    case "standings":
-                        this.getStandings(plugin);
-                        break;
-                    case "stats":
-                        this.getStandings(plugin);
-                        break;
-                }
 				this.getStandings(plugin,false);
 			},
             
-			getStandings: function(plugin,team) {
+			getStandings: function (plugin,team) {
 
 				$.ajax({
                     url: plugin.settings.apiBaseURL+plugin.settings.league+"/seasons/"+plugin.settings.season+"/standings",
@@ -57,7 +49,7 @@
             getStandingsTemplate: function(plugin,data,team) {
                 
                 var standings = data.data.standings,
-                    markup,
+                    markup = "",
                     domElems = this.utils_switchDomEl(plugin.settings.template);
                 
                 

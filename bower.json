@@ -1,11 +1,11 @@
 {
-  "name": "g-open-soccer",
+  "name": "jquery-open-soccer",
   "license": "MIT",
   "authors": [
     "Gix075 <gildo.giuliani@gmail.com> (https://github.com/Gix075)"
   ],
   "description": "Sportsopendata.net API interface jQuery plugin.",
-  "homepage": "https://github.com/Gix075/gOpenSoccer",
+  "homepage": "https://github.com/Gix075/jQuery-Open-Soccer",
   "keywords": [
     "jquery",
     "plugin",

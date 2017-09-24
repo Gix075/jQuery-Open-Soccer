@@ -1,0 +1,96 @@
+@mixin clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+        float: none;
+        clear: both;
+    }
+}
+.JOS-teamStats {
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .JOS-teamStats__team {
+        
+        .JOS-teamStats__team-inner {
+            
+            .JOS-teamStats__team-row {
+                
+                @include clearfix;
+                padding: $space/2;
+                margin: 0 0 $space 0;
+                border: 1px solid $box-border-color;
+                border-radius: 4px;
+                
+                .JOS-teamStats__team-col {
+                    float: left;
+                    width: 50%;
+                    
+                    &.JOS-teamStats__team-col-2 {
+                        border-left: 1px solid $box-border-color;
+                        padding-left: $space;
+                    }
+                    
+                    .JOS-teamStats__team-col-inner {
+                        padding: $space/2;
+                    }
+                }
+            } //JOS-teamStats__team-row
+            
+        }
+    } // JOS-teamStats__team
+    
+}
+
+
+.JOS-teamStats {
+    
+    .JOS-teamStats__team {
+        .JOS-teamStats__team-inner {
+            
+            .JOS-teamStats__team-row {
+                .JOS-teamStats__team-col {
+                    .JOS-teamStats__team-col-inner {
+                        
+                        .JOS-teamStats__team-teamname {
+                            margin: 0 0 $space/2 0;
+                        }
+                        
+                        .JOS-teamStats__team-col-data {
+                            
+                            .JOS-teamStats__team-data-title {}
+                            .JOS-teamStats__team-datas {
+                                @include clearfix;
+                                .JOS-teamStats__team-data {
+                                    float: left;
+                                    padding: $space/4 $space/2;
+                                    margin: 0 $space/4 $space/4 0;
+                                    border: 1px solid $infobox-border-color;
+                                    border-radius: 4px;
+                                    text-align: center;
+                                    font-weight: 700;
+                                    .JOS-teamStats__team-data-label {
+                                        text-transform: uppercase;
+                                        display: inline-block;
+                                        margin: 0 $space/4 0 0;
+                                        color: $infobox-label-color;
+                                    }
+                                    .JOS-teamStats__team-data-value {
+                                        display: inline-block;
+                                        color: $infobox-value-color;
+                                    }
+                                }
+                            } // JOS-teamStats__team-datas
+                        }
+                        
+                    } // JOS-teamStats__team-col-data
+                }
+            } //JOS-teamStats__team-row
+            
+        }
+    } // JOS-teamStats__team
+    
+}

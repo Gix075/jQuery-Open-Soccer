@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gOpenSoccer - Standings</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jQueryOpenSoccer.css">
+        <link rel="stylesheet" href="css/demo.css">
+		<!--<script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
+        
+	</head>
+	<body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="site-header">
+                        <h1 class="site-title">jQuery.Open.Soccer.Stats<small>Soccer Multileague Stats jQuery Plugin</small></h1>
+                    </header>
+                    <p class="site-overview">
+                        This plugin shows soccer stats in your webpages. <br>
+                        It can show standings about italian "Serie A" and "Serie B", 
+                        british "Premiere League" and spanish "Liga"
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <section id="documentation" class="col-md-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#getting-star" aria-controls="getting-star" role="tab" data-toggle="tab">Getting Start</a></li>
+                        <li role="presentation"><a href="#options" aria-controls="options" role="tab" data-toggle="tab">Options</a></li>
+                        <li role="presentation"><a href="#views" aria-controls="views" role="tab" data-toggle="tab">Views</a></li>
+                        <li role="presentation"><a href="#templates" aria-controls="templates" role="tab" data-toggle="tab">Templates</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="getting-star">
+                            <h4>Include jQuery and gOpenSoccer</h4>
+                            <p>Include javascript files in your page. Remember that <a href="http://jquery.com" title="jQuery"><strong>jQuery</strong></a> is reuqired!</p>
+<pre>
+&lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.opensoccer.min.js"&gt;&lt;/script&gt;
+</pre>
+                            <h4>Plugin Usage</h4>
+                            <p>
+                                Use plugin in this way. All parameters used on example below, are setted as default value. 
+                            </p>
+<pre>
+$('#yourElementID').JOS_getStats({
+    season: "15-16",
+    league: "serie-a",
+    debug: false
+});
+</pre>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="options">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Option</th>
+                                        <th>Type</th>
+                                        <th>Default</th>
+                                        <th>Description and Allowed Values</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>season</td>
+                                        <td>STRING</td>
+                                        <td>"15-16"</td>    
+                                        <td>
+                                            Defines the standings season<br>
+                                            <strong>Allowed:</strong><br>
+                                            <em>"15-16"</em>, <em>"16-17"</em>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>league</td>
+                                        <td>STRING</td>
+                                        <td>"serie-a"</td>    
+                                        <td>
+                                            Defines the standings league<br>
+                                            <strong>Allowed:</strong><br>
+                                            <em>"serie-a"</em>, <em>"serie-b"</em>, <em>"premiere-league"</em>, <em>"liga"</em>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>team</td>
+                                        <td>STRING/BOOL</td>
+                                        <td>false</td>    
+                                        <td>
+                                            Defines the standings data that will be showed by plugin.<br>
+                                            <strong>Allowed:</strong><br>
+                                            <em>"all"</em>, <em>"Single Team Name"</em>, false
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>apiBaseURL</td>
+                                        <td>STRING</td>
+                                        <td>"http://soccer.sportsopendata.net/v1/leagues/"</td>    
+                                        <td>
+                                            Defines the base Sports Open Data API URL.<br>
+                                            <strong>Don't change this value!</strong><br>
+                                            <strong>Allowed:</strong><br>
+                                            <em>"any valid url"</em>
+                                        </td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div role="tabpanel" class="tab-pane" id="views">
+                            
+                        </div>
+                        
+                        
+                        <div role="tabpanel" class="tab-pane" id="templates">
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </section>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <h2>DEMO</h2>
+                    <h3>Standings <small>(simple view)</small></h3>
+                    <div id="element"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../src/jquery.opensoccer.stats.js"></script>
+		<script>
+			$( function() {
+				
+                $( "#element" ).JOS_getStats({
+                    season: "15-16",
+                    league: "serie-a"
+                });
+                
+			} );
+		</script>
+	</body>
+</html>

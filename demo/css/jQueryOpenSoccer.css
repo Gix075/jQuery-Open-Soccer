@@ -1,0 +1,57 @@
+.JOS-teamStats * {
+  box-sizing: border-box;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row {
+  padding: 10px;
+  margin: 0 0 20px 0;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row:after, .JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row:before {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col {
+  float: left;
+  width: 50%;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col.JOS-teamStats__team-col-2 {
+  border-left: 1px solid #efefef;
+  padding-left: 20px;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner {
+  padding: 10px;
+}
+
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-teamname {
+  margin: 0 0 10px 0;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-col-data .JOS-teamStats__team-datas:after, .JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-col-data .JOS-teamStats__team-datas:before {
+  content: "";
+  display: table;
+  float: none;
+  clear: both;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-col-data .JOS-teamStats__team-datas .JOS-teamStats__team-data {
+  float: left;
+  padding: 5px 10px;
+  margin: 0 5px 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-col-data .JOS-teamStats__team-datas .JOS-teamStats__team-data .JOS-teamStats__team-data-label {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  color: #999;
+}
+.JOS-teamStats .JOS-teamStats__team .JOS-teamStats__team-inner .JOS-teamStats__team-row .JOS-teamStats__team-col .JOS-teamStats__team-col-inner .JOS-teamStats__team-col-data .JOS-teamStats__team-datas .JOS-teamStats__team-data .JOS-teamStats__team-data-value {
+  display: inline-block;
+  color: inherit;
+}
+
+/*# sourceMappingURL=jQueryOpenSoccer.css.map */

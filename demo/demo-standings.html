@@ -4,7 +4,7 @@
 		<title>gOpenSoccer - Standings</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="demo.css">
+        <link rel="stylesheet" href="css/demo.css">
 		<!--<script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
         
 	</head>
@@ -40,14 +40,14 @@
                             <p>Include javascript files in your page. Remember that <a href="http://jquery.com" title="jQuery"><strong>jQuery</strong></a> is reuqired!</p>
 <pre>
 &lt;script src="jquery.min.js"&gt;&lt;/script&gt;
-&lt;script src="jquery.gopensoccer.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.opensoccer.min.js"&gt;&lt;/script&gt;
 </pre>
                             <h4>Plugin Usage</h4>
                             <p>
                                 Use plugin in this way. All parameters used on example below, are setted as default value. 
                             </p>
 <pre>
-$('#yourElementID').gOpenSoccer_getStandings({
+$('#yourElementID').JOS_getStandings({
     season: "15-16",
     league: "serie-a",
     view: "extended",
@@ -250,7 +250,7 @@ $('#yourElementID').gOpenSoccer_getStandings({
 &lt;/table&gt;
 
 &lt;script&gt;
-    $('#standings').gOpenSoccer_getStandings({
+    $('#standings').JOS_getStandings({
         season: "15-16",
         league: "serie-a",
         view: "simple",
@@ -373,27 +373,27 @@ $('#yourElementID').gOpenSoccer_getStandings({
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="../src/jquery.gopensoccer.standings.js"></script>
+        <script src="../src/jquery.opensoccer.standings.js"></script>
 		<script>
 			$( function() {
-				$( "#element_1" ).gOpenSoccer_getStandings({
+				$( "#element_1" ).JOS_getStandings({
                     season: "15-16",
                     league: "serie-a"
                 });
                 
-                $( "#element_2" ).gOpenSoccer_getStandings({
+                $( "#element_2" ).JOS_getStandings({
                     season: "15-16",
                     league: "serie-a",
                     view: "advanced"
                 });
                 
-                $( "#element_3" ).gOpenSoccer_getStandings({
+                $( "#element_3" ).JOS_getStandings({
                     season: "15-16",
                     league: "serie-a",
                     view: "extended"
                 });
                 
-                $( "#element_4" ).gOpenSoccer_getStandings({
+                $( "#element_4" ).JOS_getStandings({
                     season: "15-16",
                     league: "serie-a",
                     view: "full"
